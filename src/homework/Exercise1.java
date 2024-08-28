@@ -11,18 +11,19 @@ public class Exercise1 {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Nhap vao check: ");
         String check = scanner.next();
-        if (check.equalsIgnoreCase("ynoes")) {
+        while (check.equalsIgnoreCase("yes")) {
             if (n % 2 == 0) {
                 System.out.println("n = " + n + " n la so chan!!");
             } else {
                 System.out.println("n = " + n + " n la so le!!");
             }
-        } else {
-            if (n % 2 == 0) {
-                System.out.println("n la so chan!!");
-            } else {
-                System.out.println("n la so le!!");
-            }
+            break;
         }
+        if (n % 2 == 0) {
+            System.out.println("n la so chan!!");
+        } else {
+            System.out.println("n la so le!!");
+        }
+
     }
 }
